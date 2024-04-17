@@ -7,8 +7,15 @@
 
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
+(package! org :pin "28dc5dd1ac1325ecb6bdec3e9f72997c35eebfa0")
 (package! org-modern)
-
+(package! org-fancy-priorities)
+(package! org-super-agenda)
+(package! org-ql)
+(package! code-cells)
+(package! pet)
+;; (package! org-autolist) ; broken, can't break lines https://github.com/calvinwyoung/org-autolist/issues/9
+;; (package! org-roam-protocol :recipe (:host github :repo "rougier/nano-modeline"))
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
 ;; https://github.com/radian-software/straight.el#the-recipe-format
@@ -24,7 +31,11 @@
 
 ;; If you'd like to disable a package included with Doom, you can do so here
 ;; with the `:disable' property:
-;; (package! builtin-package :disable t)
+(package! pipenv :disable t)
+(package! nose :disable t)
+(package! anaconda-mode :disable t)
+(package! py-isort :disable t)
+(package! pyimport :disable t)
 
 ;; You can override the recipe of a built in package without having to specify
 ;; all the properties for `:recipe'. These will inherit the rest of its recipe
